@@ -1,0 +1,83 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "a8620528071bceb8fcf6d04210f374bd445725ba00fffc48e2bbbc409164c5bc",
+    "telemetry.devDeviceId": "cc64976e-2b38-410f-b1ca-68bf75150d44",
+    "backupWorkspaces": {
+        "workspaces": [
+            {
+                "id": "e22ea57620f62a7d99cc4817264ed620",
+                "configURIPath": "file:///home/exxo/.config/Code/Workspaces/1766243565972/workspace.json"
+            }
+        ],
+        "folders": [],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 32,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/exxo/.config/hypr": "__default__profile__",
+            "file:///home/exxo/.config/Code/Workspaces/1766243565972/workspace.json": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1f1f1f",
+    "windowSplash": {
+        "zoomLevel": 0.4,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#888888",
+            "background": "#1f1f1f",
+            "editorBackground": "#1f1f1f",
+            "titleBarBackground": "#1a1a1a",
+            "titleBarBorder": "rgba(0, 0, 0, 0)",
+            "activityBarBackground": "#1a1a1a",
+            "sideBarBackground": "#1a1a1a",
+            "statusBarBackground": "#1a1a1a",
+            "statusBarNoFolderBackground": "#1a1a1a"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 30,
+            "activityBarWidth": 0,
+            "sideBarWidth": 214,
+            "auxiliaryBarWidth": 0,
+            "statusBarHeight": 0,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 214,
+            "auxiliaryBarWidth": 233,
+            "workspaces": {
+                "671b9204cd65866f1e12d5764e62d179": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "e22ea57620f62a7d99cc4817264ed620": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "workspaceIdentifier": {
+                "id": "e22ea57620f62a7d99cc4817264ed620",
+                "configURIPath": "file:///home/exxo/.config/Code/Workspaces/1766243565972/workspace.json"
+            },
+            "backupPath": "/home/exxo/.config/Code/Backups/e22ea57620f62a7d99cc4817264ed620",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 0,
+                "width": 960,
+                "height": 1042
+            }
+        },
+        "openedWindows": []
+    }
+}
