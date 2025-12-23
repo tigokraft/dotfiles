@@ -28,5 +28,8 @@ hyprctl hyprpaper unload all
 # Re-preload the current one so it's not accidentally cleared from the 'active' list
 hyprctl hyprpaper preload "$WALL"
 
+killall waybar
+waybar &
+
 # 5. Refresh Hyprland colors
 hyprctl reload

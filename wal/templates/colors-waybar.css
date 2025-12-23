@@ -1,0 +1,11 @@
+@define-color background #{background.strip};
+@define-color foreground #{foreground.strip};
+@define-color color0 #{color0.strip};
+@define-color color1 #{color1.strip};
+@define-color color2 #{color2.strip};
+@define-color color3 #{color3.strip};
+@define-color color4 #{color4.strip};
+@define-color color5 #{color5.strip};
+@define-color color6 #{color6.strip};
+@define-color color7 #{color7.strip};
+@define-color accent @color1;
