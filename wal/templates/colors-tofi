@@ -1,0 +1,5 @@
+background-color = #{background.strip}CC
+text-color = #{foreground.strip}
+selection-color = #{color1.strip}
+border-color = #{color1.strip}
+outline-color = #{color2.strip}
