@@ -1,123 +1,178 @@
+/* Import the pywal generated colors using an absolute path */
+@import "/home/exxo/.cache/wal/colors-waybar.css";
+
 * {
     border: none;
     border-radius: 0;
-    font-family: JetBrainsMono Nerd Font, monospace;
+    font-family: "JetBrainsMono Nerd Font", monospace;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px; /* Reduced from 14.5px */
     min-height: 0;
 }
 
+/* The main bar container - reduced top margin */
 window#waybar {
-    background: rgba(21, 18, 27, 0);
-    color: #cdd6f4;
+    background: transparent;
+    color: @foreground;
+    margin: 4px 8px 0px 8px;
+}
+
+tooltip {
+    background: alpha(@background, 0.95);
+    border-radius: 8px;
+    border: 1px solid @color1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+tooltip label {
+    color: @foreground;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+/* Global padding for all modules - reduced for smaller height/width */
+#workspaces,
+#window,
+#clock,
+#tray,
+#custom-media-toggle,
+#memory, #cpu,
+#network, #pulseaudio, #pulseaudio.microphone, #backlight, #battery {
+    background: alpha(@background, 0.85);
+    color: @foreground;
+    margin: 4px 0px; 
+    padding: 0px 8px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Base Interactivity for modules (except window/tray/workspaces which have their own) */
+#clock:hover,
+#custom-media-toggle:hover,
+#memory:hover, #cpu:hover,
+#network:hover, #pulseaudio:hover, #pulseaudio.microphone:hover, #backlight:hover, #battery:hover {
+    background: alpha(@color1, 0.4);
+    color: @foreground;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+/* Left Modules */
+#clock {
+    border-radius: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: @color6;
+}
+
+#workspaces {
+    border-radius: 10px;
+    padding: 0px 4px;
 }
 
 #workspaces button {
-    padding: 5px;
-    color: #555869;
-    margin-right: 5px;
+    padding: 2px 6px;
+    color: @color8;
+    border-radius: 6px;
+    margin: 3px 2px;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 #workspaces button.active {
-    color: #a6adc8;
-}
-
-#workspaces button.focused {
-    color: #a6adc8;
-    background: #eba0ac;
-    border-radius: 10px;
+    background: @color1;
+    color: @background;
+    min-width: 24px;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #a6e3a1;
-    border-radius: 10px;
+    background: @color2;
+    color: @background;
 }
 
 #workspaces button:hover {
-    background: #cdd6f4;
-    color: #11111b; 
+    background: alpha(@color1, 0.6);
+    color: @foreground;
+}
+
+/* Center Modules */
+#window {
     border-radius: 10px;
+    font-weight: 600;
+    color: @color5;
 }
 
-#window,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#workspaces,
-#tray,
-#backlight {
-    background: #1e1e2e;
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-top: 5px;
-    /* border: 1px solid #181825; */
+/* Right Modules - Standalone */
+#custom-media-toggle {
+    border-radius: 10px;
+    margin-right: 8px;
+    color: @color1;
 }
-
-#backlight {
-    border-radius: 10px 0px 0px 10px;
+#custom-media-toggle:hover {
+    color: @background;
+    background: @color1;
 }
 
 #tray {
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
-#workspaces {
-    background: #1e1e2e;
-    border-radius: 10px;
-    margin-left: 10px;
-    padding-right: 0px;
-    padding-left: 5px;
+/* Right Modules - Resource Group */
+#memory {
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 10px;
+    color: @color5;
 }
 
 #cpu {
     border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
+    padding-right: 10px;
+    margin-right: 8px;
+    color: @color4;
 }
 
-#memory {
-    border-radius: 10px 0px 0px 10px;
-}
-
-#window {
-    border-radius: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
-}
-
-#clock {
-    color: #a6adc8;
-    border-radius: 10px 10px 10px 10px;
-    margin-left: 5px;
-    border-right: 0px;
-}
-
+/* Right Modules - System Info Group */
 #network {
-    color:  #a6adc8;
     border-radius: 10px 0px 0px 10px;
-
+    padding-left: 10px;
+    color: @color1;
 }
 
 #pulseaudio {
-    color: #a6adc8;
-    border-left: 0px;
-    border-right: 0px;
+    color: @color2;
 }
 
 #pulseaudio.microphone {
-    color: #a6adc8;
-    border-radius: 0px 10px 10px 0px;
-    border-left: 0px;
-    border-right: 0px;
-    margin-right: 5px;
+    color: @color3;
+}
+
+#backlight {
+    color: @color6;
 }
 
 #battery {
-    color:#a6adc8;
     border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
+    padding-right: 10px;
+    margin-right: 8px;
+    color: @color4;
+}
+
+/* Battery Specifics */
+#battery.charging {
+    color: @color2;
+}
+
+#battery.warning:not(.charging) {
+    color: @color3;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @color1;
+    color: @background;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @foreground;
+        color: @background;
+    }
 }

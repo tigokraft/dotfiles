@@ -12,14 +12,15 @@
     ],
     "modules-center": ["hyprland/window"],
     "modules-right": [
+        "custom/media-toggle",
         "tray",
         "memory",
         "cpu",
         "network",
-        "battery",
-        "backlight",
         "pulseaudio",
-        "pulseaudio#microphone"
+        "pulseaudio#microphone",
+        "backlight",
+        "battery"
     ],
 
     "hyprland/window": {
@@ -42,6 +43,7 @@
         "format": "{:%A    %B-%d-%Y    %I:%M:%S %p}",
         "interval": 1,
         "rotate": 0,
+        "on-click": "zenity --calendar",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
@@ -142,5 +144,12 @@
         "tooltip-format-disconnected": "Disconnected",
         "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2
-    }
+    },
+
+    "custom/media-toggle": {
+        "format": "󰎆",
+        "tooltip": "Toggle Music Player",
+        // This command tells AGS to toggle the window named 'music-player'
+        "on-click": "ags -t music-player"
+    },
 }
